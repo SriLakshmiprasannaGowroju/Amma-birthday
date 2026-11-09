@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#2e1065"/>
+      <stop offset="50%" stopColor="#4c1d95"/>
+      <stop offset="100%" stopColor="#1e0b36"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#f472b6"/>
+      <stop offset="100%" stopColor="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stopColor="#fef08a" stop-opacity="0.4"/>
+      <stop offset="100%" stopColor="#fef08a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg1)"/>
+  <circle cx="300" cy="200" r="150" fill="url(#sun)"/>
+  
+  <!-- Gentle Heart Art -->
+  <g transform="translate(300, 200) scale(1.1)">
+    <path d="M0,35 C-40,-15 -80,-15 -80,-55 C-80,-85 -45,-105 0,-70 C45,-105 80,-85 80,-55 C80,-15 40,-15 0,35 Z" fill="url(#glow1)" opacity="0.85"/>
+    <circle cx="0" cy="-60" r="25" fill="#fbcfe8" opacity="0.9"/>
+    <!-- Child Heart -->
+    <path d="M-5,10 C-25,-20 -50,-20 -50,-45 C-50,-65 -25,-75 0,-50 C25,-75 50,-65 50,-45 C50,-20 25,-20 -5,10 Z" fill="#ffffff" opacity="0.75" transform="scale(0.55) translate(-10, -30)"/>
+  </g>
+
+  <!-- Stars -->
+  <circle cx="120" cy="90" r="2.5" fill="#fef08a"/>
+  <circle cx="480" cy="110" r="3" fill="#fef08a"/>
+  <circle cx="160" cy="320" r="2" fill="#d8b4fe"/>
+  <circle cx="450" cy="330" r="2.5" fill="#fbcfe8"/>
+
+  <text x="300" y="365" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+    Gentle Hands, Endless Love
+  </text>
+  <text x="300" y="395" font-family="'Noto Sans Telugu', sans-serif" font-size="16" fill="#fbcfe8" text-anchor="middle">
+    అమ్మ అమృత హస్తాలు ❤️
+  </text>
+</svg>
