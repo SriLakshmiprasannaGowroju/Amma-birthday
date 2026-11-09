@@ -12,8 +12,8 @@ export const StardustCursor: React.FC = () => {
   const [particles, setParticles] = useState<SparkleParticle[]>([]);
 
   useEffect(() => {
-    // Only enable on pointer-capable devices
-    if (typeof window === 'undefined') return;
+    // Only enable on desktop mouse/fine pointer devices to keep mobile scrolling buttery smooth
+    if (typeof window === 'undefined' || !window.matchMedia('(pointer: fine)').matches) return;
 
     let particleId = 0;
     const colors = ['#f472b6', '#d8b4fe', '#fef08a', '#c084fc', '#ffffff'];

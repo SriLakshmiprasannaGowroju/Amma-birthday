@@ -316,7 +316,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   background: radial-gradient(circle at 50% 20%, #220b42 0%, #130626 50%, #080214 100%);
   padding: 6.5rem 1.25rem 4rem;
   box-sizing: border-box;
@@ -1879,6 +1880,10 @@
    MOBILE & TABLET RESPONSIVENESS
    ========================================================================== */
 
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVENESS
+   ========================================================================== */
+
 @media (max-width: 900px) {
   .nav-desktop-links {
     display: none;
@@ -1897,47 +1902,327 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .birthday-section {
-    padding: 4rem 1rem;
+    padding: 3.5rem 1rem;
   }
 
-  .memories-grid,
+  .section-header-block {
+    margin-bottom: 2.2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Top Navbar */
+  .site-navbar {
+    padding: 0.5rem 0.85rem;
+  }
+
+  .nav-brand-button .brand-text {
+    font-size: 1.15rem;
+  }
+
+  .nav-actions-group {
+    gap: 0.4rem;
+  }
+
+  .nav-audio-visualizer {
+    display: none;
+  }
+
+  .nav-music-btn {
+    padding: 0.35rem 0.55rem;
+  }
+
+  .language-toggle-pill {
+    padding: 0.2rem 0.55rem;
+  }
+
+  .lang-choice-btn {
+    font-size: 0.78rem;
+    padding: 0.1rem 0.25rem;
+  }
+
+  /* Hero First Screen */
+  .birthday-screen-root {
+    padding: 4.6rem 0.85rem 2.2rem;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .glowing-moon-wrapper {
+    top: 3.6rem;
+    right: 0.6rem;
+    opacity: 0.45;
+  }
+
+  .moon-body {
+    width: 58px;
+    height: 58px;
+    box-shadow:
+      0 0 15px 3px rgba(254, 240, 138, 0.4),
+      0 0 35px 10px rgba(192, 132, 252, 0.3);
+  }
+
+  .wishing-pill-tag {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .main-birthday-heading {
+    font-size: clamp(1.85rem, 7.2vw, 2.5rem);
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
+  }
+
+  .telugu-birthday-heading {
+    font-size: clamp(1.15rem, 4.4vw, 1.5rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .gift-box-wrapper {
+    margin: 0.35rem 0 0.85rem;
+  }
+
+  .gift-box-svg {
+    width: clamp(125px, 35vw, 160px);
+  }
+
+  .gift-shadow-floor {
+    width: clamp(95px, 28vw, 125px);
+    height: 12px;
+  }
+
+  .birthday-subtitle {
+    font-size: clamp(0.92rem, 3.4vw, 1.08rem);
+    margin-bottom: 1.25rem;
+    line-height: 1.45;
+  }
+
+  .surprise-trigger-button {
+    padding: 0.85rem 1.8rem;
+    font-size: 1.02rem;
+  }
+
+  /* Section 1: Memories */
+  .memories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .memory-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .memory-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .memory-card-body {
+    padding: 1.1rem 1.1rem 1.25rem;
+  }
+
+  .memory-item-title {
+    font-size: 1.18rem;
+  }
+
+  .memory-item-caption {
+    font-size: 0.92rem;
+  }
+
+  /* Lightbox */
+  .lightbox-portal {
+    padding: 0.65rem;
+  }
+
+  .lightbox-card {
+    border-radius: 16px;
+  }
+
+  .lightbox-image-container {
+    max-height: 38vh;
+  }
+
+  .lightbox-main-img {
+    max-height: 38vh;
+  }
+
+  .lightbox-details {
+    padding: 1.1rem 1rem 1.3rem;
+  }
+
+  .lightbox-photo-title {
+    font-size: 1.2rem;
+  }
+
+  .lightbox-photo-caption {
+    font-size: 0.92rem;
+  }
+
+  .lightbox-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-prev { left: 0.5rem; }
+  .btn-next { right: 0.5rem; }
+
+  /* Section 2: Letter */
+  .letter-scroll-paper {
+    padding: 2.2rem 1.1rem 1.6rem;
+    border-radius: 20px;
+  }
+
+  .seal-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .letter-salutation {
+    font-size: 1.4rem;
+  }
+
+  .letter-paragraph {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .letter-paragraph.telugu-font {
+    font-size: 0.98rem;
+    line-height: 1.85;
+  }
+
+  .signature-text {
+    font-size: 1.35rem;
+  }
+
+  /* Section 3: Special Cards */
   .special-cards-grid {
     grid-template-columns: 1fr;
+    gap: 1.15rem;
   }
 
-  .floating-music-widget {
-    bottom: 1rem;
-    left: 1rem;
+  .special-card {
+    padding: 1.35rem 1.15rem;
+    border-radius: 18px;
   }
 
-  .floating-back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 44px;
-    height: 44px;
+  .special-card-title {
+    font-size: 1.18rem;
   }
 
-  .music-pill-card {
-    padding: 0.35rem 0.75rem 0.35rem 0.4rem;
+  .special-card-description {
+    font-size: 0.92rem;
   }
 
-  .music-title-text {
-    font-size: 0.78rem;
+  /* Section 4: Cake */
+  .birthday-cake-svg {
+    width: clamp(200px, 68vw, 280px);
   }
 
-  .music-status-text {
-    font-size: 0.7rem;
+  .wish-celebration-banner {
+    padding: 1.35rem 1rem;
+    border-radius: 16px;
+  }
+
+  .wish-banner-title {
+    font-size: 1.35rem;
   }
 
   .cake-action-btn {
-    padding: 0.95rem 2rem;
-    font-size: 1.05rem;
+    padding: 0.85rem 1.8rem;
+    font-size: 1.02rem;
+  }
+
+  /* Section 6: Final Surprise */
+  .final-surprise-section {
+    padding: 4.5rem 1rem 3.5rem;
+  }
+
+  .crown-circle {
+    width: 62px;
+    height: 62px;
+  }
+
+  .final-main-heading {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .final-telugu-message {
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+    margin-bottom: 0.65rem;
+  }
+
+  .final-subheading-display {
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+    margin-bottom: 1.75rem;
+  }
+
+  .final-emotional-card {
+    padding: 1.75rem 1.15rem;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .final-emotional-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
   }
 
   .final-replay-button {
-    padding: 1rem 2rem;
-    font-size: 1.05rem;
+    padding: 0.95rem 2rem;
+    font-size: 1.02rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Floating Widgets on Mobile */
+  .floating-music-widget {
+    bottom: 0.85rem;
+    left: 0.75rem;
+    z-index: 990;
+  }
+
+  .music-pill-card {
+    padding: 0.35rem 0.65rem 0.35rem 0.35rem;
+    gap: 0.45rem;
+    max-width: calc(100vw - 78px);
+  }
+
+  .music-play-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .music-title-text {
+    font-size: 0.76rem;
+  }
+
+  .music-status-text {
+    display: none;
+  }
+
+  .music-visualizer-bars {
+    display: none;
+  }
+
+  .floating-back-to-top {
+    bottom: 0.85rem;
+    right: 0.75rem;
+    width: 42px;
+    height: 42px;
+    z-index: 990;
   }
 }
