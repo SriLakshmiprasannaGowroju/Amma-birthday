@@ -65,3 +65,4 @@ export const StardustCursor: React.FC = () => {
     </div>
   );
 };
+

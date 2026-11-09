@@ -1,4 +1,4 @@
-// Helper to resolve asset URLs with the correct base path for GitHub Pages and local dev
+// Helper to resolve asset URLs with the correct base path for GitHub Pages and local development
 
 export const getAssetUrl = (path: string): string => {
   const base = import.meta.env.BASE_URL || './';
